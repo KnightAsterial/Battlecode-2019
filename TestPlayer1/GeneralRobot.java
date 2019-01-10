@@ -32,7 +32,6 @@ public abstract class GeneralRobot {
 
         int blah = (int)(Math.random()*9);
         int[] move = possibleMoves[blah];
-        gc.log(blah+"");
         return gc.move(move[0], move[1]);
 
     }
