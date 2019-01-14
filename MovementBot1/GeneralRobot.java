@@ -37,6 +37,7 @@ public abstract class GeneralRobot {
     }
 
     public static boolean isPassable(int x, int y){
+
         if(x < 0 || x >= gc.map.length){
             return false;
         }

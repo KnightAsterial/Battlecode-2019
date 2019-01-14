@@ -1,7 +1,12 @@
 package bc19;
 
 public class MyRobot extends BCAbstractRobot{
-    
+
+    /*
+    * Notes: Java.util.Random is not supported. Use Math.random() instead
+    * map and robotmap are in the form map[y][x]
+    */
+
     static int numTurnSinceBirth = 0;
     static GeneralRobot unit = null;
 
