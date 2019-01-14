@@ -4,6 +4,8 @@ public abstract class GeneralRobot {
     //game controller
     static BCAbstractRobot gc;
 
+
+
     /**
     * Called once to set up everything
     */
@@ -52,6 +54,14 @@ public abstract class GeneralRobot {
         else{
             return false;
         }
+    }
+
+    /**
+    * Uses A* to generate pathfinding map to target. 
+    */
+    public static int[][] generateAStarPathfindingMap(){
+        int[][] result = {{1,1},{2,2}};
+        return result;
     }
 
 }

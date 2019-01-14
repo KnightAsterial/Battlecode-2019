@@ -5,6 +5,12 @@ public class MyRobot extends BCAbstractRobot{
     /*
     * Notes: Java.util.Random is not supported. Use Math.random() instead
     * map and robotmap are in the form map[y][x]
+    *
+    * Java.awt.Point is not supported
+    *
+    *
+    * Java.util.LinkedList and Java.util.ArrayList are supported
+    * java.util.PriorityQueue is not supported
     */
 
     static int numTurnSinceBirth = 0;
