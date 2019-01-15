@@ -25,6 +25,22 @@ public class AstarPriorityQueue{
 		}
 	}
 
+	public void add(AstarPoint p, int priority){
+		AstarQElement element = new AstarQElement(p,priority);
+		boolean contains = false;
+		for(int i = 0; i < queue.size(); i++){
+			if(queue.get(i).priority > priority){
+				queue.add(i, element);
+				contains = true;
+				break;
+			}
+		}
+
+		if(!contains){
+			queue.add(element);
+		}
+	}
+
 	/**
 	* @return first element in queue (lowest priority)
 	*/
@@ -41,5 +57,9 @@ public class AstarPriorityQueue{
 
 	public int size(){
 		return queue.size();
+	}
+
+	public boolean isEmpty(){
+		return queue.size() == 0;
 	}
 }

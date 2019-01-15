@@ -1,5 +1,7 @@
 package bc19;
 
+import java.util.HashMap;
+
 public class MyRobot extends BCAbstractRobot{
 
     /*
@@ -11,6 +13,9 @@ public class MyRobot extends BCAbstractRobot{
     *
     * Java.util.LinkedList and Java.util.ArrayList are supported
     * java.util.PriorityQueue is not supported
+    * Java.util.HashMap is supported!
+    * Java.util.Set is supported
+    * Java.util.Collections.reverse() is supported
     */
 
     static int numTurnSinceBirth = 0;
@@ -19,7 +24,7 @@ public class MyRobot extends BCAbstractRobot{
     public Action turn() {
 
         try{
-            //initial commands 
+            //initial commands
             if (numTurnSinceBirth == 0){
             	log("Got this far");
                 GeneralRobot.init(this);
@@ -61,7 +66,7 @@ public class MyRobot extends BCAbstractRobot{
 
         }
         catch (Exception e){
-            log(e.getMessage());
+            log("Turn: " + numTurnSinceBirth + ": " + e.getMessage());
         }
     }
 }

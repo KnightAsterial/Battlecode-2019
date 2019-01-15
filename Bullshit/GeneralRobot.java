@@ -1,6 +1,6 @@
 package bc19;
 
-import java.util.Random;
+
 
 public abstract class GeneralRobot {
     //game controller

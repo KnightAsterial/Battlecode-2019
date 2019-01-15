@@ -1,32 +1,32 @@
 package bc19;
 
-import java.util.Random;
+import java.util.Set;
+import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 public class MyRobot extends BCAbstractRobot{
-    
+
     static int numTurnSinceBirth = 0;
     static GeneralRobot unit = null;
 
     public Action turn() {
 
+        int i = 1;
+        while (true){
+            log(i + "");
+            i++;
+        }
+
         try{
-            //initial commands 
+            //initial commands
             if (numTurnSinceBirth == 0){
             	log("Got this far");
                 GeneralRobot.init(this);
 
-                
-                switch(me.unit){
-                    case 0:
-                        unit = new Castle();
-                        unit.onAwake();
-                        break;
-
-                    case 2:
-                        unit = new Pilgrim();
-                        unit.onAwake();
-                        break;
-                }
+                unit = new Castle();
+                unit.onAwake();
             }
 
 

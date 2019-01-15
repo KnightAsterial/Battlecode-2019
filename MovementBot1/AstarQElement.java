@@ -1,13 +1,16 @@
 package bc19;
 
 public class AstarQElement{
-	public int x;
-	public int y;
+	public AstarPoint point;
 	public int priority;
 
 	public AstarQElement(int x, int y, int priority){
-		this.x = x;
-		this.y = y;
+		point = new AstarPoint(x,y);
+		this.priority = priority;
+	}
+
+	public AstarQElement(AstarPoint p, int priority){
+		point = p;
 		this.priority = priority;
 	}
 }
